@@ -1,0 +1,17 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "{% static 'blog/js/welcome.js' %}"></script>
+        <link rel = "stylesheet" type = "text/css" href = "{% static 'blog/css/base.css' %}" 
+    </head>
+    <body onload = "greet()">
+        <h3>Edit Blogs:</h3>
+            {% if blogs %}
+                <ul class = "number">
+                    {% for blog in blogs%}
+                        <li>{{blog.name}}<a href='/blogs/add_blog/{{blog.id}}'> [Edit]</a></li>
+            {% endfor %}
+        {% endif %}
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<html>
+    <body>
+        <form action = "/blogs/add_blog/{{ blog.id}}/" method = "POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type = "submit" value="Add Blog" />
+        </form>
+    </body>
+</html>
