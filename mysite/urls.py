@@ -22,5 +22,5 @@ from blog.forms import LoginForm
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blogs/', include('blog.urls' , namespace = 'blogs')),
-    path('login/' , auth_views.login , {'template_name': 'blog/login.html' , 'authentication form': 'loginForm'} , name = 'login')
+    path('login/' , auth_views.LoginView , {'template_name': 'blog/login.html' , 'authentication form': 'loginForm'} , name = 'login')
 ]
